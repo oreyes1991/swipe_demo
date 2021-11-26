@@ -89,3 +89,56 @@ body,html {
 	right: calc(-20px - var(--x-size));
 	top: calc(50% - (var(--x-size) / 2));
 }
+
+.list-wrapper {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	display: grid;
+	row-gap: 10px;
+}
+
+.list-item {
+	position: relative;
+    display: grid;
+    place-content: center;
+    column-gap: 1rem;
+    grid-template-columns: .5fr 1fr;
+    padding: 0.5rem 0;
+    margin: 0 15%;
+}
+
+.list-item::before {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: -2px;
+	left: 0;
+	height: 2px;
+	background-color: var(--main-red);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .3s ease;
+}
+
+
+.list-item.selected::before {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.l-red::before {
+	background-color: var(--main-red);
+}
+
+.l-blue::before {
+	background-color: var(--main-blue);
+}
+
+.l-yellow::before {
+	background-color: var(--main-yellow);
+}
+
+.l-green::before {
+	background-color: var(--main-green);
+}
