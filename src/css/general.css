@@ -5,7 +5,7 @@
 	--main-red: #a4161a;
 	--main-blue: #004e89;
 	--main-green: #a7c957;
-	--x-size: 150px;
+	--x-size: 75px;
 }
 
 * {
@@ -62,7 +62,7 @@ body,html {
 }
 
 .swipe-area-wrapper > img {
-	width: 400px;
+	width: 150px;
 	height: auto;
 }
 
