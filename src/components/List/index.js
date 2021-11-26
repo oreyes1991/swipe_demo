@@ -1,4 +1,4 @@
-import { Div, H3, Span } from '@rebelstack-io/metaflux';
+import { Div, H4, Span } from '@rebelstack-io/metaflux';
 
 const list = [
 	{
@@ -29,7 +29,7 @@ const dirMap = {
 export const List = () => Div({ className: 'list-wrapper' }, list.map((l) => {
 	return Div({ className: 'list-item l-' + l.symbol }, [
 		Span({}, l.symbol),
-		H3({}, l.answer)
+		H4({}, l.answer)
 	]).onStoreEvent('SWIPE', (state, that) => {
 		const selected = dirMap[state.Main.swipedValue];
 		if (selected === l.symbol) {
